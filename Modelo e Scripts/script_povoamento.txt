@@ -1,0 +1,36 @@
+INSERT INTO USUARIO 
+(NUMERO_CPF, ORGAO_ID_ORGAO, CARGO_ID_CARGO, NOME_FUNC) 
+VALUES
+('50646880594', 1, 1, 'EDELBERTO DA SILVA'),
+('46519187518', 2, 2, 'JOANA DA SILVA');
+--------------------------------------------------------
+INSERT INTO ORGAO 
+(ID_ORGAO, DESCRICAO_ORGAO) 
+VALUES
+(1, 'SECRETARIA A'),
+(2, 'SECRETARIA B');
+(3, 'SECRETARIA C');
+--------------------------------------------------------
+INSERT INTO CARGO 
+(ID_CARGO, DESCRICAO_CARGO) 
+VALUES
+(1,'DESENVOLVEDOR'),
+(2,'ANALISTA DE SISTEMA'),
+(3,'GERENTE DE PROJETO'),
+(4,'ANALISTA DE REQUISITOS');
+--------------------------------------------------------
+INSERT INTO SISTEMA 
+(ID_SISTEMA, DESCRICAO_SISTEMA) 
+VALUES
+(1, 'SISTEMA A'),
+(2, 'SISTEMA B'),
+(3, 'SISTEMA C');
+--------------------------------------------------------
+INSERT INTO USUARIO_SISTEMA 
+(USUARIO_NUMERO_CPF, SISTEMA_ID_SISTEMA) 
+VALUES
+('50646880594',1),
+('50646880594',2),
+('46519187518',3);
+
+

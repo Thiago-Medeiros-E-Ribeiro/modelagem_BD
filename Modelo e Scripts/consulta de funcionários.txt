@@ -1,0 +1,15 @@
+SELECT 
+(LPAD(NUMERO_CPF,11),'([0-9]{3})([0-9]{3})([0-9]{3})','\1.\2.\3-') AS CPF,
+UPPER(NOME_FUNC),
+orgao.DESCRICAO_ORGAO,
+cargo.DESCRICAO_CARGO,
+sistema.DESCRICAO_SISTEMA
+FROM USUARIO usuario
+	INNER JOIN ORGAO orgao
+		ON orgao.ID_ORGAO = usuario.ORGAO_ID_ORGAO
+	INNER JOIN CARGO cargo
+		ON cargo.ID_CARGO = usuario.CARGO_ID_CARGO
+	INNER JOIN USUARIO_SISTEMA usuario_sistema
+		ON usuario_sistema.USUARIO_NUMERO_CPF = usuario.NUMERO_CPF
+	INNER JOIN SISTEMA sistema
+		ON sistema.ID_SISTEMA = usuario_sistema.SISTEMA_ID_SISTEMA
